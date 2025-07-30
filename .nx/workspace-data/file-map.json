@@ -1,0 +1,523 @@
+{
+  "version": "6.0",
+  "nxVersion": "19.6.2",
+  "deps": {
+    "@hono/node-server": "^1.12.1",
+    "gdal-async": "^3.9.2",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-hook-form": "^7.53.0",
+    "react-router-dom": "^6.26.1",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
+    "tsx": "^4.17.0",
+    "@emotion/babel-plugin": "11.11.0",
+    "@nx/eslint": "19.6.2",
+    "@nx/eslint-plugin": "19.6.2",
+    "@nx/js": "19.6.2",
+    "@nx/node": "19.6.2",
+    "@nx/react": "19.6.2",
+    "@nx/vite": "19.6.2",
+    "@nx/web": "19.6.2",
+    "@nx/workspace": "19.6.2",
+    "@swc-node/register": "~1.9.1",
+    "@swc/cli": "~0.3.12",
+    "@swc/core": "~1.5.7",
+    "@swc/helpers": "~0.5.11",
+    "@testing-library/react": "15.0.6",
+    "@types/node": "18.16.9",
+    "@types/react": "18.3.1",
+    "@types/react-dom": "18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
+    "@typescript-eslint/parser": "^7.16.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "@vitest/coverage-v8": "^1.0.4",
+    "@vitest/ui": "^1.3.1",
+    "eslint": "~8.57.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-react": "7.32.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "hono": "^4.5.0",
+    "jsdom": "~22.1.0",
+    "nx": "19.6.2",
+    "prettier": "^2.6.2",
+    "typescript": "~5.5.2",
+    "vite": "^5.0.0",
+    "vitest": "^1.3.1"
+  },
+  "pathMappings": {
+    "@climadex/types": [
+      "shared/types.ts"
+    ]
+  },
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/vite/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "testTargetName": "test",
+        "serveTargetName": "serve",
+        "previewTargetName": "preview",
+        "serveStaticTargetName": "serve-static"
+      }
+    },
+    {
+      "name": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    }
+  ],
+  "fileMap": {
+    "nonProjectFiles": [],
+    "projectFileMap": {
+      "@climalizer/source": [
+        {
+          "file": ".nx/workspace-data/d/server-process.json",
+          "hash": "11897994063694582290"
+        },
+        {
+          "file": "README.md",
+          "hash": "11914364251899954815"
+        },
+        {
+          "file": "db.sqlite3",
+          "hash": "14760789301071249048"
+        },
+        {
+          "file": "index.html",
+          "hash": "11686000740332350002"
+        },
+        {
+          "file": "nx.json",
+          "hash": "5628240572885221667"
+        },
+        {
+          "file": "package-lock.json",
+          "hash": "10750385382218796737"
+        },
+        {
+          "file": "package.json",
+          "hash": "14716587773753587884",
+          "deps": [
+            "npm:@emotion/babel-plugin",
+            "npm:@nx/eslint",
+            "npm:@nx/eslint-plugin",
+            "npm:@nx/js",
+            "npm:@nx/node",
+            "npm:@nx/react",
+            "npm:@nx/vite",
+            "npm:@nx/web",
+            "npm:@nx/workspace",
+            "npm:@swc-node/register",
+            "npm:@swc/cli",
+            "npm:@swc/core",
+            "npm:@swc/helpers",
+            "npm:@testing-library/react",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:@vitejs/plugin-react",
+            "npm:@vitest/coverage-v8",
+            "npm:@vitest/ui",
+            "npm:eslint",
+            "npm:eslint-config-prettier",
+            "npm:eslint-plugin-import",
+            "npm:eslint-plugin-jsx-a11y",
+            "npm:eslint-plugin-react",
+            "npm:eslint-plugin-react-hooks",
+            "npm:hono",
+            "npm:jsdom",
+            "npm:nx",
+            "npm:prettier",
+            "npm:typescript",
+            "npm:vite",
+            "npm:vitest",
+            "npm:@hono/node-server",
+            "npm:gdal-async",
+            "npm:react",
+            "npm:react-dom",
+            "npm:react-hook-form",
+            "npm:react-router-dom",
+            "npm:sqlite",
+            "npm:sqlite3",
+            "npm:tsx"
+          ]
+        },
+        {
+          "file": "pnpm-lock.yaml",
+          "hash": "9340265457875559111"
+        },
+        {
+          "file": "public/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "scripts/bootstrap.ts",
+          "hash": "9460261478470582188",
+          "deps": [
+            "npm:sqlite3",
+            "npm:sqlite"
+          ]
+        },
+        {
+          "file": "scripts/factories.json",
+          "hash": "1924777069617102640"
+        },
+        {
+          "file": "shared/types.ts",
+          "hash": "15436684304745346926"
+        },
+        {
+          "file": "tsconfig.base.json",
+          "hash": "16318021571312472037"
+        },
+        {
+          "file": "vite.config.ts",
+          "hash": "462773036459185128",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-react",
+            "npm:@nx/vite"
+          ]
+        },
+        {
+          "file": ".nx/workspace-data/vite-8410637291831080659.hash",
+          "hash": "14707569238323498006"
+        },
+        {
+          "file": ".nx/workspace-data/vite-10538225559886866074.hash",
+          "hash": "11302814831437226119"
+        },
+        {
+          "file": ".nx/workspace-data/eslint-4393011795395336301.hash",
+          "hash": "1389868326933519382"
+        },
+        {
+          "file": ".nx/workspace-data/lockfile.hash",
+          "hash": "11247730125779552292"
+        },
+        {
+          "file": ".nx/workspace-data/project-graph.json",
+          "hash": "4134083140853868044"
+        },
+        {
+          "file": ".nx/workspace-data/file-map.json",
+          "hash": "12359572759535887210"
+        },
+        {
+          "file": ".nx/workspace-data/parsed-lock-file.json",
+          "hash": "2068210815428639959"
+        },
+        {
+          "file": ".nx/cache/cloud/2507.29.3/index.js",
+          "hash": "9390446036203204451"
+        },
+        {
+          "file": ".nx/cache/cloud/2507.29.3/package.json",
+          "hash": "1144058227172633564"
+        },
+        {
+          "file": "node_modules/.vite/src/deps_temp_bb2aa5bf/package.json",
+          "hash": "8630294688235076505"
+        },
+        {
+          "file": "node_modules/.vite/src/deps_temp_bb2aa5bf/react-dom.js.map",
+          "hash": "9947606979680686569"
+        },
+        {
+          "file": "node_modules/.vite/src/deps_temp_bb2aa5bf/react.js.map",
+          "hash": "9947606979680686569"
+        },
+        {
+          "file": "node_modules/.vite/src/deps_temp_bb2aa5bf/react-router-dom.js",
+          "hash": "3302674703864914994"
+        },
+        {
+          "file": "node_modules/.vite/src/deps_temp_bb2aa5bf/react_jsx-runtime.js.map",
+          "hash": "14212103773384410562"
+        },
+        {
+          "file": "node_modules/.vite/src/deps_temp_bb2aa5bf/react-hook-form.js",
+          "hash": "9769685883080052967"
+        },
+        {
+          "file": "node_modules/.vite/src/deps_temp_bb2aa5bf/chunk-SUES4DUA.js.map",
+          "hash": "1855468647711469963"
+        },
+        {
+          "file": "node_modules/.vite/src/deps_temp_bb2aa5bf/react-dom_client.js",
+          "hash": "12598191462958610674"
+        },
+        {
+          "file": "node_modules/.vite/src/deps_temp_bb2aa5bf/chunk-SUES4DUA.js",
+          "hash": "10357554341642286382"
+        },
+        {
+          "file": "node_modules/.vite/src/deps_temp_bb2aa5bf/react.js",
+          "hash": "13856359426552422191"
+        },
+        {
+          "file": "node_modules/.vite/src/deps_temp_bb2aa5bf/react-router-dom.js.map",
+          "hash": "9681514614869184484"
+        },
+        {
+          "file": "node_modules/.vite/src/deps_temp_bb2aa5bf/chunk-IBW7ISUA.js.map",
+          "hash": "5754643613120579249"
+        },
+        {
+          "file": "node_modules/.vite/src/deps_temp_bb2aa5bf/react_jsx-dev-runtime.js",
+          "hash": "8967163092277324338"
+        },
+        {
+          "file": "node_modules/.vite/src/deps_temp_bb2aa5bf/react-dom_client.js.map",
+          "hash": "12699973032086754704"
+        },
+        {
+          "file": "node_modules/.vite/src/deps_temp_bb2aa5bf/react_jsx-runtime.js",
+          "hash": "3603840318343073557"
+        },
+        {
+          "file": "node_modules/.vite/src/deps_temp_bb2aa5bf/chunk-IBW7ISUA.js",
+          "hash": "11716152018644088373"
+        },
+        {
+          "file": "node_modules/.vite/src/deps_temp_bb2aa5bf/react_jsx-dev-runtime.js.map",
+          "hash": "18252456576859956641"
+        },
+        {
+          "file": "node_modules/.vite/src/deps_temp_bb2aa5bf/react-dom.js",
+          "hash": "13610202447222728777"
+        },
+        {
+          "file": "node_modules/.vite/src/deps_temp_bb2aa5bf/react-hook-form.js.map",
+          "hash": "10934809710358976675"
+        }
+      ],
+      "frontend": [
+        {
+          "file": "frontend/.DS_Store",
+          "hash": "13944059530533312759"
+        },
+        {
+          "file": "frontend/app/.DS_Store",
+          "hash": "6371137308413661248"
+        },
+        {
+          "file": "frontend/app/common/Container.css",
+          "hash": "2988943829548528203"
+        },
+        {
+          "file": "frontend/app/common/Container.tsx",
+          "hash": "14738777757945815273",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "frontend/app/common/SideBar.css",
+          "hash": "15045161570084523150"
+        },
+        {
+          "file": "frontend/app/common/SideBar.tsx",
+          "hash": "4243787177785581902",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "frontend/app/common/Wrapper.css",
+          "hash": "6596030690791539108"
+        },
+        {
+          "file": "frontend/app/common/Wrapper.tsx",
+          "hash": "11120267074995634008",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "frontend/app/common/world.svg",
+          "hash": "1204219868372254006"
+        },
+        {
+          "file": "frontend/app/pages/.DS_Store",
+          "hash": "59148975894241930"
+        },
+        {
+          "file": "frontend/app/pages/add-factory/AddFactoryForm.css",
+          "hash": "16369991888987597549"
+        },
+        {
+          "file": "frontend/app/pages/add-factory/AddFactoryForm.tsx",
+          "hash": "13323861211152004294",
+          "deps": [
+            "npm:react",
+            "npm:react-hook-form",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "frontend/app/pages/add-factory/index.tsx",
+          "hash": "14653248653456668884",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "frontend/app/pages/factories/FactoriesTable.css",
+          "hash": "16217110233770075633"
+        },
+        {
+          "file": "frontend/app/pages/factories/FactoriesTable.tsx",
+          "hash": "5788717697212535327",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "frontend/app/pages/factories/FactoryRow.tsx",
+          "hash": "7513846688519542596",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "frontend/app/pages/factories/index.css",
+          "hash": "16598612617227789346"
+        },
+        {
+          "file": "frontend/app/pages/factories/index.tsx",
+          "hash": "15283061108130259345",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "frontend/app/pages/report/index.tsx",
+          "hash": "6182182788053502416",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "frontend/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "frontend/main.css",
+          "hash": "12489189845175961364"
+        },
+        {
+          "file": "frontend/main.tsx",
+          "hash": "1575535871184392251",
+          "deps": [
+            "npm:react-dom",
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "frontend/project.json",
+          "hash": "17420422265685519782"
+        },
+        {
+          "file": "frontend/tsconfig.json",
+          "hash": "13605160114464694488"
+        }
+      ],
+      "backend": [
+        {
+          "file": "backend/.DS_Store",
+          "hash": "6979606630184948054"
+        },
+        {
+          "file": "backend/.project.json.swp",
+          "hash": "4708195462516472514"
+        },
+        {
+          "file": "backend/assets/2030.tif",
+          "hash": "13187695343342032393"
+        },
+        {
+          "file": "backend/assets/2050.tif",
+          "hash": "8209914459915391234"
+        },
+        {
+          "file": "backend/assets/2070.tif",
+          "hash": "6470884242703625922"
+        },
+        {
+          "file": "backend/assets/2090.tif",
+          "hash": "12877843221396870034"
+        },
+        {
+          "file": "backend/project.json",
+          "hash": "5783104258418170537"
+        },
+        {
+          "file": "backend/src/.index.ts.swo",
+          "hash": "10846206176894280001"
+        },
+        {
+          "file": "backend/src/.index.ts.swp",
+          "hash": "1298076068702047804"
+        },
+        {
+          "file": "backend/src/.types.ts.swp",
+          "hash": "15947278315389584037"
+        },
+        {
+          "file": "backend/src/index.ts",
+          "hash": "15941145050075066678",
+          "deps": [
+            "npm:@hono/node-server",
+            "npm:hono",
+            "npm:sqlite3",
+            "npm:sqlite"
+          ]
+        },
+        {
+          "file": "backend/src/indicators.ts",
+          "hash": "1305781065899701458",
+          "deps": [
+            "npm:gdal-async"
+          ]
+        },
+        {
+          "file": "backend/src/types.ts",
+          "hash": "15033333502178583561"
+        },
+        {
+          "file": "backend/tsconfig.app.json",
+          "hash": "3505575720831999087"
+        },
+        {
+          "file": "backend/tsconfig.json",
+          "hash": "9420862676426701392"
+        },
+        {
+          "file": "backend/tsconfig.spec.json",
+          "hash": "13618029162790843898"
+        },
+        {
+          "file": "backend/vitest.config.mts",
+          "hash": "7108346977434076443",
+          "deps": [
+            "npm:@nx/vite",
+            "npm:vite"
+          ]
+        }
+      ]
+    }
+  }
+}
