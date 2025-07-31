@@ -7,7 +7,7 @@ import { open } from 'sqlite';
 import { IFactory } from '@climadex/types';
 import { IDbFactory } from './types';
 
-import { getMeanTemperatureWarmestQuarter, TIMEFRAMES, TimeFrame } from './indicators';
+import { getMeanTemperatureWarmestQuarter, TIMEFRAMES } from './indicators';
 
 const app = new Hono();
 
@@ -76,6 +76,7 @@ app.post('/factories', async (c: Context) => {
     return c.text('Invalid body.', 400);
   }
 
+/*
   const temperatures: number[] = [];
 
   for (const timeframe of TIMEFRAMES) {
@@ -89,9 +90,17 @@ app.post('/factories', async (c: Context) => {
       else
         return (null);
   }
+*/
 
-  const riskAssessment =
-    temperatures.some((temp) => temp >= 34) ? 'High' : 'Low';
+  const utils: Record<TIMEFRAMES, (lat: number, lon: number) => number | null> = {
+    '2030': (lat, lon) => getMeanTemperatureWarmestQuarter({latitude: lat, longitude: lon, timeframe: '2030'}),
+    '2050': (lat, lon) => getMeanTemperatureWarmestQuarter({latitude: lat, longitude: lon, timeframe: '2050'}),
+    '2070': (lat, lon) => getMeanTemperatureWarmestQuarter({latitude: lat, longitude: lon, timeframe: '2070'}),
+    '2090': (lat, lon) => getMeanTemperatureWarmestQuarter({latitude: lat, longitude: lon, timeframe: '2090'}),
+  }
+
+  const temperatures = TIMEFRAMES.map((tf) => utils[tf](+latitude, +longitude)).filter((t) => t !== null) as number[];
+  const riskAssessment = temperatures.some((temp) => temp >= 34) ? 'High' : 'Low';
 
   const factory: IFactory = {
     factoryName,
