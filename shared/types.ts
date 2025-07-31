@@ -6,4 +6,5 @@ export interface IFactory {
     latitude: number;
     longitude: number;
     yearlyRevenue: number;
+    riskAssessment: string;
 }

@@ -26,7 +26,7 @@ export const getMeanTemperatureWarmestQuarter = ({
   const value = +band.pixels.get(x, y);
 
   if (value < -10000 || isNaN(value)) {
-    return null;
+   return null;
   }
 
   return Math.round(value * 100) / 100;

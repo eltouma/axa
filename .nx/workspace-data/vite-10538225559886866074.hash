@@ -1,5 +1,5 @@
 {
-  "16317893694889520153vite.config.ts": {
+  "5344626789347791809vite.config.ts": {
     "targets": {
       "build": {
         "command": "vite build",
@@ -150,7 +150,7 @@
     },
     "metadata": {}
   },
-  "8820193744054881690backend/vitest.config.mts": {
+  "8579996310579555319backend/vitest.config.mts": {
     "targets": {
       "typecheck": {
         "cache": true,

@@ -7,7 +7,7 @@ import { open } from 'sqlite';
 import { IFactory } from '@climadex/types';
 import { IDbFactory } from './types';
 
-import { getMeanTemperatureWarmestQuarter, TIMEFRAMES } from './indicators';
+import { getMeanTemperatureWarmestQuarter, TIMEFRAMES, TimeFrame } from './indicators';
 
 const app = new Hono();
 
@@ -61,6 +61,7 @@ app.get('/factories', async (c: Context) => {
         latitude: factory.latitude,
         longitude: factory.longitude,
         yearlyRevenue: factory.yearly_revenue,
+	riskAssessment: factory.risk_assessment,
       })
     )
   );
@@ -75,6 +76,23 @@ app.post('/factories', async (c: Context) => {
     return c.text('Invalid body.', 400);
   }
 
+  const temperatures: number[] = [];
+
+  for (const timeframe of TIMEFRAMES) {
+    const value = getMeanTemperatureWarmestQuarter({
+        latitude: +latitude,
+        longitude: +longitude,
+        timeframe,
+      })
+      if (value !== null)
+	 temperatures.push(value);
+      else
+        return (null);
+  }
+
+  const riskAssessment =
+    temperatures.some((temp) => temp >= 34) ? 'High' : 'Low';
+
   const factory: IFactory = {
     factoryName,
     country,
@@ -82,17 +100,19 @@ app.post('/factories', async (c: Context) => {
     latitude: +latitude,
     longitude: +longitude,
     yearlyRevenue: +yearlyRevenue,
-  };
+    riskAssessment, 
+ }
 
   await client.run(
-    `INSERT INTO factories (factory_name, address, country, latitude, longitude, yearly_revenue)
-VALUES (?, ?, ?, ?, ?, ?);`,
+    `INSERT INTO factories (factory_name, address, country, latitude, longitude, yearly_revenue, risk_assessment)
+VALUES (?, ?, ?, ?, ?, ?, ?);`,
     factory.factoryName,
     factory.address,
     factory.country,
     factory.latitude,
     factory.longitude,
-    factory.yearlyRevenue
+    factory.yearlyRevenue,
+    factory.riskAssessment
   );
 
   return c.json({ result: 'OK' });

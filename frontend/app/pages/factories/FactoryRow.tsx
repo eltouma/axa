@@ -18,6 +18,7 @@ export function FactoryRow(factory: IFactory) {
       <td>{factory.latitude}</td>
       <td>{factory.longitude}</td>
       <td>{formatter.format(+factory.yearlyRevenue)}</td>
+      <td>{factory.riskAssessment}</td>
     </tr>
   );
 }
