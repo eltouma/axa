@@ -7,4 +7,4 @@ export interface IDbFactory {
   longitude: number;
   yearly_revenue: number;
   risk_assessment: string;
-}
+

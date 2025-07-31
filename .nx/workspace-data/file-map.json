@@ -88,7 +88,7 @@
         },
         {
           "file": "db.sqlite3",
-          "hash": "10705226135874861117"
+          "hash": "3837386608573630873"
         },
         {
           "file": "index.html",
@@ -162,7 +162,7 @@
         },
         {
           "file": "scripts/bootstrap.ts",
-          "hash": "9460261478470582188",
+          "hash": "11234252281064131953",
           "deps": [
             "npm:sqlite3",
             "npm:sqlite"
@@ -217,7 +217,7 @@
         },
         {
           "file": "backend/src/index.ts",
-          "hash": "4974215108061296168",
+          "hash": "13975703737133619393",
           "deps": [
             "npm:@hono/node-server",
             "npm:hono",
@@ -234,7 +234,7 @@
         },
         {
           "file": "backend/src/types.ts",
-          "hash": "15033333502178583561"
+          "hash": "115585245463914644"
         },
         {
           "file": "backend/tsconfig.app.json",
@@ -342,7 +342,7 @@
         },
         {
           "file": "frontend/app/pages/factories/FactoryRow.tsx",
-          "hash": "12258194377599476798",
+          "hash": "17412601448276820443",
           "deps": [
             "npm:react",
             "npm:react-router-dom"
@@ -362,7 +362,7 @@
         },
         {
           "file": "frontend/app/pages/report/index.tsx",
-          "hash": "6182182788053502416",
+          "hash": "16458758366874617914",
           "deps": [
             "npm:react",
             "npm:react-router-dom"

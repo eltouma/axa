@@ -8,6 +8,7 @@ export function FactoryRow(factory: IFactory) {
     currency: 'USD',
   });
 
+console.log(`id 👉 ${factory.id}`);
   return (
     <tr key={factory.id}>
       <td>

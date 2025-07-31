@@ -40,6 +40,25 @@ app.get('/', (c) => {
   );
 });
 
+app.get('/reports/:reportId', async (c: Context) => {
+  const client = await dbClientPromise;
+  const id = c.req.param('reportId');
+
+  const factory = await client.get('SELECT * FROM factories WHERE id = ?;', id);
+console.log(`FACTORY ID ✅ ${factory}`);
+  return c.json({
+      factory:{ 
+        factoryName: factory.factory_name,
+        address: factory.address,
+        country: factory.country,
+        latitude: factory.latitude,
+        longitude: factory.longitude,
+        yearlyRevenue: factory.yearly_revenue,
+	riskAssessment: factory.risk_assessment,
+      }
+    });
+});
+
 app.get('/factories', async (c: Context) => {
   const client = await dbClientPromise;
 
@@ -55,6 +74,7 @@ app.get('/factories', async (c: Context) => {
   return c.json(
     factories.map(
       (factory: IDbFactory): IFactory => ({
+        id: factory.id,
         factoryName: factory.factory_name,
         address: factory.address,
         country: factory.country,
@@ -100,7 +120,7 @@ app.post('/factories', async (c: Context) => {
   }
 
   const temperatures = TIMEFRAMES.map((tf) => utils[tf](+latitude, +longitude)).filter((t) => t !== null) as number[];
-  const riskAssessment = temperatures.some((temp) => temp >= 34) ? 'High' : 'Low';
+  const riskAssessment = temperatures.some((temp) => temp >= 35) ? 'High' : 'Low';
 
   const factory: IFactory = {
     factoryName,
