@@ -362,7 +362,7 @@
         },
         {
           "file": "frontend/app/pages/report/index.tsx",
-          "hash": "16458758366874617914",
+          "hash": "7948762485858579989",
           "deps": [
             "npm:react",
             "npm:react-router-dom"
